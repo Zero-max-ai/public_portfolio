@@ -3,7 +3,9 @@ import { Suspense, lazy } from "react";
 
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
-const Loader = lazy(() => import('./components/Loader'))
+const NotFound = lazy(() => import("./pages/PageNotFound"));
+const Photos = lazy(() => import("./pages/Photography"));
+const Loader = lazy(() => import("./components/Loader"));
 
 const App = () => {
   return (
@@ -11,6 +13,8 @@ const App = () => {
       <Routes>
         <Route path={"/"} element={<Home />} />
         <Route path={"/about"} element={<About />} />
+        <Route path={'/photography'} element={<Photos />} />
+        <Route path={"*"} element={<NotFound />} />
       </Routes>
     </Suspense>
   );
