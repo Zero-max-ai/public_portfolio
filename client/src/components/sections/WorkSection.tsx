@@ -3,7 +3,7 @@ import { projectDetails } from "../../utils/";
 
 const WorkSection = () => {
   return (
-    <div className="w-7/12 mx-auto py-20 flex flex-col gap-4 justify-center">
+    <div className="w-7/12 max-lg:w-11/12 mx-auto py-20 flex flex-col gap-4 justify-center">
       <h1 className="geologica-bold text-3xl pb-5">My Work</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {projectDetails.map((project, index) => {
