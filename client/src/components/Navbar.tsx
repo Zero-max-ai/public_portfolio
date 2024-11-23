@@ -1,11 +1,25 @@
-import { NavLink, Link } from "react-router-dom";
-import { navigationUtils } from "../utils/";
+import { NavLink, Link, useLocation } from "react-router-dom";
 
 import SocialLinks from "./SocialLinks";
 import HamburgerMenu from "./HamburgerMenu";
 import MobileMenu from "./MobileMenu";
 
 const Navbar = () => {
+  const location = useLocation();
+
+  const scrollToWork = () => {
+    const workSection = document.getElementById("work");
+    if (workSection) {
+      workSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleWorkClick = () => {
+    if (location.pathname === "/") {
+      scrollToWork();
+    }
+  };
+
   return (
     <header className="relative border-b-2 border-black">
       <nav className="px-10 md:px-32 flex items-center justify-between py-6">
@@ -14,13 +28,11 @@ const Navbar = () => {
             Akshat Gangi
           </Link>
           <div className="max-lg:hidden flex gap-4 geologica-regular">
-            {navigationUtils.map(({ title, loc }) => {
-              return (
-                <NavLink key={title} to={loc}>
-                  {title}
-                </NavLink>
-              );
-            })}
+            <NavLink to={"/#work"} onClick={handleWorkClick}>
+              Work
+            </NavLink>
+            <NavLink to={"/about"}>About</NavLink>
+            <NavLink to={"/photography"}>Photography</NavLink>
           </div>
         </div>
         <SocialLinks />

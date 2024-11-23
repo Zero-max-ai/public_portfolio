@@ -4,6 +4,9 @@
 - add the design.
 - add the gallary.
 - add the actual projects.
-- activate the /#work tag.
+- activate the /#work tag. - 23.11.2024 (done)
 - add the actual profile pic.
-- add the resume as well.
+- add the resume as well. - 23.11.2024
+- stop the scroll while hamburger opened.
+- close the hamburger when the link clicked.
+- make the site responsive (long term).
