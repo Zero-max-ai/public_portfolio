@@ -1,27 +1,29 @@
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
-
 import Layout from "../components/layout/Layout";
-import HeroSection from "../components/sections/HeroSection";
-import WorkSection from "../components/sections/WorkSection";
+import HomeSection from "../components/sections/HomeSection";
+import FeaturedWorkSection from "../components/sections/FeaturedWorkSection";
+
+// import Button from "../components/Button";
+// import { Link } from "react-router-dom";
+// import { motion } from "framer-motion";
 
 const Home = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    if (location.hash === "#work") {
-      const workSection = document.getElementById("work");
-      if (workSection) {
-        workSection.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  }, [location]);
-
   return (
     <Layout>
-      <div className="w-8/12 max-md:w-10/12 max-sm:w-full mx-auto">
-        <HeroSection />
-        <WorkSection />
+      <div className="py-20 w-11/12 max-sm:w-10/12 mx-auto">
+        <div className="flex flex-col gap-10">
+          {/* <div className="flex flex-col ">
+            <h1 className="geologica-bold text-4xl mb-4">Hi, this is Akshat</h1>
+            <span className="source-code-pro-normal">
+              Building tools that simplify developer's workflows.
+            </span>
+            <span className="source-code-pro-normal pb-5">
+              Currently working on open-source projects and ricing my Linux
+              environment. Based in New Delhi, India
+            </span>
+          </div> */}
+          <HomeSection />
+          <FeaturedWorkSection />
+        </div>
       </div>
     </Layout>
   );

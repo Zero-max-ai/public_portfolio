@@ -1,12 +1,8 @@
-## Things to add
-- active the social links.
-- add the animation.
-- add the design.
-- add the gallary.
-- add the actual projects.
-- activate the /#work tag. - 23.11.2024 (done)
-- add the actual profile pic.
-- add the resume as well. - 23.11.2024
-- stop the scroll while hamburger opened.
-- close the hamburger when the link clicked.
-- make the site responsive (long term).
+- add the scroll change effect by motion useViewport something wala. (done)
+- add the zustand state mgmt.
+- create the about page. (done)
+- create the footer pgae. (done)
+- create the hero page with normal background and some effects like floating and some sort animation.
+- create the card components for work project. 
+- create the list of projects (clock&alarm{bash}, bentobox{frontend,motion},) (done)
+- add the hamburger full fledge.

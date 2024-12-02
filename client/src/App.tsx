@@ -1,22 +1,18 @@
 import { Routes, Route } from "react-router-dom";
-import { Suspense, lazy } from "react";
 
-const Home = lazy(() => import("./pages/Home"));
-const About = lazy(() => import("./pages/About"));
-const NotFound = lazy(() => import("./pages/PageNotFound"));
-const Photos = lazy(() => import("./pages/Photography"));
-const Loader = lazy(() => import("./components/Loader"));
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Photography from "./pages/Photography";
+import Blogs from "./pages/Blogs";
 
 const App = () => {
   return (
-    <Suspense fallback={<Loader />}>
-      <Routes>
-        <Route path={"/"} element={<Home />} />
-        <Route path={"/about"} element={<About />} />
-        <Route path={'/photography'} element={<Photos />} />
-        <Route path={"*"} element={<NotFound />} />
-      </Routes>
-    </Suspense>
+    <Routes>
+      <Route path={"/"} element={<Home />} />
+      <Route path={"/about-me"} element={<About />} />
+      <Route path={"photography"} element={<Photography />} />
+      <Route path={"/my-blogs"} element={<Blogs />} />
+    </Routes>
   );
 };
 

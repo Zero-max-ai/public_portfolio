@@ -4,40 +4,65 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Source Code Pro */
-.source-code-pro-regular {
-  font-family: "Source Code Pro", monospace;
+html, body {
+  background: #121212;
+  color: #ffffff;
+}
+
+.source-code-pro-normal {
+  font-family: "Source Code Pro", serif;
   font-optical-sizing: auto;
-  font-weight: 400; /* Regular weight */
+  font-weight: 400; /* Normal weight */
+  font-style: normal;
+}
+
+.source-code-pro-medium {
+  font-family: "Source Code Pro", serif;
+  font-optical-sizing: auto;
+  font-weight: 600; /* Medium bold */
   font-style: normal;
 }
 
 .source-code-pro-bold {
-  font-family: "Source Code Pro", monospace;
+  font-family: "Source Code Pro", serif;
   font-optical-sizing: auto;
-  font-weight: 700; /* Bold weight */
+  font-weight: 800; /* Bold weight */
   font-style: normal;
 }
 
-/* Geologica */
-.geologica-regular {
-  font-family: "Geologica", sans-serif;
+.geologica-normal {
+  font-family: "Geologica", serif;
   font-optical-sizing: auto;
-  font-weight: 400; /* Regular weight */
+  font-weight: 400; /* Normal weight */
   font-style: normal;
   font-variation-settings:
     "slnt" 0,
-    /* Normal slant */ "CRSV" 0,
-    /* No crosstalk */ "SHRP" 0; /* Normal sharpness */
+    "CRSV" 0,
+    "SHRP" 0;
+}
+
+.geologica-medium {
+  font-family: "Geologica", serif;
+  font-optical-sizing: auto;
+  font-weight: 600; /* Medium bold */
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0,
+    "SHRP" 0;
 }
 
 .geologica-bold {
-  font-family: "Geologica", sans-serif;
+  font-family: "Geologica", serif;
   font-optical-sizing: auto;
-  font-weight: 700; /* Bold weight */
+  font-weight: 800; /* Bold weight */
   font-style: normal;
   font-variation-settings:
     "slnt" 0,
-    /* Normal slant */ "CRSV" 0,
-    /* No crosstalk */ "SHRP" 0; /* Normal sharpness */
+    "CRSV" 0,
+    "SHRP" 0;
+}
+
+.socialLinks {
+  background-color: orange;
 }
