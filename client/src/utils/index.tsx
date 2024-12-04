@@ -64,16 +64,19 @@ export const navigationLinks: navigationLinksInterface[] = [
   { title: "Blogs", renderTo: "/my-blogs" },
 ];
 
+import { IconType } from "react-icons";
+import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
+
 export interface socialLinksInterface {
-  title: string;
+  Icon: IconType;
   renderTo: string;
 }
 
 export const socialLinks: socialLinksInterface[] = [
-  { title: "Instagram", renderTo: "" },
+  { Icon: FaInstagram, renderTo: "" },
   {
-    title: "Github",
+    Icon: FaGithub,
     renderTo: "https://github.com/Zero-max-ai",
   },
-  { title: "LinkedIn", renderTo: "linkedin.com/in/akshat-gangi-b457a61ab" },
+  { Icon: FaLinkedin, renderTo: "https://linkedin.com/in/akshat-gangi-b457a61ab" },
 ];

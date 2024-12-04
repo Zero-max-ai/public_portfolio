@@ -5,11 +5,10 @@ import {
   socialLinksInterface,
   navigationLinksInterface,
 } from "../utils/index";
-import CurvedArrow from "../assets/curved-arrow.svg";
 
 const Footer = () => {
   return (
-    <footer className="w-11/12 md:w-10/12 mx-auto md:py-40 md:px-32 max-md:py-10 flex max-md:flex-col md:items-center justify-between max-md:gap-14 source-code-pro-medium">
+    <footer className="w-11/12 lg:w-10/12 mx-auto md:py-40 lg:px-32 max-md:py-10 max-lg:px-10 flex max-md:flex-col max-md:gap-14 md:items-center justify-between source-code-pro-medium">
       {/*navigation and social links*/}
       <div className="flex max-md:flex-col gap-20 max-md:gap-10">
         <div className="flex flex-col gap-4">
@@ -30,18 +29,19 @@ const Footer = () => {
         </div>
         <div className="flex flex-col gap-4">
           <h1 className="geologica-medium text-xl">Social Links</h1>
-          {socialLinks.map(({ title, renderTo }: socialLinksInterface) => {
-            return (
-              <Link
-                key={title}
-                to={renderTo}
-                className="group flex items-center gap-2"
-              >
-                {title}{" "}
-                <img src={CurvedArrow} className="hidden group-hover:block" />
-              </Link>
-            );
-          })}
+          <div className="flex gap-4">
+            {socialLinks.map(({ Icon, renderTo }: socialLinksInterface) => {
+              return (
+                <Link
+                  key={renderTo}
+                  to={renderTo}
+                  className=""
+                >
+                  {<Icon />}{" "}
+                </Link>
+              );
+            })}
+          </div>
         </div>
       </div>
       {/* copyright section*/}

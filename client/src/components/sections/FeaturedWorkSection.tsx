@@ -12,6 +12,7 @@ const FeaturedWorkSection = () => {
             {mainProject.map(({ image, title, badge, description, cta }) => {
               return (
                 <MainProject
+                  key={title}
                   image={image}
                   title={title}
                   badge={badge}
@@ -28,6 +29,7 @@ const FeaturedWorkSection = () => {
             {sideProject.map(({ image, title, description, cta }) => {
               return (
                 <SideProject
+                  key={title}
                   image={image}
                   title={title}
                   description={description}
